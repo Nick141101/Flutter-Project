@@ -4,7 +4,6 @@ import 'package:flutterproject/services/auth/auth_exceptions.dart';
 import 'package:flutterproject/services/auth/auth_service.dart';
 import 'package:flutterproject/utilities/dialogs/error_dialog.dart';
 
-
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
 
@@ -41,14 +40,16 @@ class _LoginViewState extends State<LoginView> {
             enableSuggestions: false,
             autocorrect: false,
             keyboardType: TextInputType.emailAddress,
-            decoration: const InputDecoration(hintText: 'Enter your email here'),
+            decoration:
+                const InputDecoration(hintText: 'Enter your email here'),
           ),
           TextField(
             controller: _password,
             obscureText: true,
             enableSuggestions: false,
             autocorrect: false,
-            decoration: const InputDecoration(hintText: 'Enter your password here'),
+            decoration:
+                const InputDecoration(hintText: 'Enter your password here'),
           ),
           TextButton(
             onPressed: () async {
@@ -92,7 +93,8 @@ class _LoginViewState extends State<LoginView> {
           ),
           TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamedAndRemoveUntil(registerRoute, (route) => false);
+                Navigator.of(context)
+                    .pushNamedAndRemoveUntil(registerRoute, (route) => false);
               },
               child: const Text('Not registered yet? Register here!'))
         ],
