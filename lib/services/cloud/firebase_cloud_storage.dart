@@ -45,9 +45,7 @@ class FirebaseCloudStorage {
     required String text,
   }) async {
     try {
-      await notes.doc(documentId).update({
-        textFieldName: text,
-      });
+      await notes.doc(documentId).update({textFieldName: text});
     } catch (e) {
       throw CouldNotUpdateNoteException();
     }

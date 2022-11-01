@@ -6,9 +6,15 @@ import 'firebase_auth_provider.dart';
 class AuthService implements AuthProvider {
   final AuthProvider provider;
 
+  @override
+  AuthUser? get currentUser => provider.currentUser;
+
   const AuthService(this.provider);
 
   factory AuthService.firebase() => AuthService(FirebaseAuthProvider());
+
+  @override
+  Future<void> initialize() => provider.initialize();
 
   @override
   Future<AuthUser> createUser({
@@ -19,9 +25,6 @@ class AuthService implements AuthProvider {
         email: email,
         password: password,
       );
-
-  @override
-  AuthUser? get currentUser => provider.currentUser;
 
   @override
   Future<AuthUser> logIn({
@@ -40,5 +43,6 @@ class AuthService implements AuthProvider {
   Future<void> sendEmailVerification() => provider.sendEmailVerification();
 
   @override
-  Future<void> initialize() => provider.initialize();
+  Future<void> sendPasswordReset({required String toEmail}) =>
+      provider.sendPasswordReset(toEmail: toEmail);
 }

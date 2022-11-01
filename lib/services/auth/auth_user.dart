@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart' show User;
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show immutable;
 
 @immutable
 class AuthUser {
   final String id;
-  final bool isEmailVerified;
   final String email;
+  final bool isEmailVerified;
 
   const AuthUser({
     required this.id,
