@@ -16,9 +16,10 @@ import 'package:flutterproject/views/verify_email_view.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
-    title: 'Flutter Demo',
+    title: 'Notsi',
     theme: ThemeData(
-      primarySwatch: Colors.blue,
+      primarySwatch: Colors.deepPurple,
+      fontFamily: 'SFUIDisplay',
     ),
     home: BlocProvider<AuthBloc>(
       create: (context) => AuthBloc(FirebaseAuthProvider()),
