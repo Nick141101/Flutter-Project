@@ -17,6 +17,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
     title: 'Notsi',
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(
       primarySwatch: Colors.deepPurple,
       fontFamily: 'SFUIDisplay',
