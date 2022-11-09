@@ -14,20 +14,17 @@ abstract class AuthState {
 }
 
 class AuthStateUninitialized extends AuthState {
-  const AuthStateUninitialized({required bool isLoading})
-      : super(isLoading: isLoading);
+  const AuthStateUninitialized({required super.isLoading});
 }
 
 class AuthStateLoggedIn extends AuthState {
   final AuthUser user;
 
-  const AuthStateLoggedIn({required this.user, required bool isLoading})
-      : super(isLoading: isLoading);
+  const AuthStateLoggedIn({required this.user, required super.isLoading});
 }
 
 class AuthStateNeedsVerification extends AuthState {
-  const AuthStateNeedsVerification({required bool isLoading})
-      : super(isLoading: isLoading);
+  const AuthStateNeedsVerification({required super.isLoading});
 }
 
 class AuthStateRegistering extends AuthState {
@@ -35,8 +32,8 @@ class AuthStateRegistering extends AuthState {
 
   const AuthStateRegistering({
     required this.exception,
-    required bool isLoading,
-  }) : super(isLoading: isLoading);
+    required super.isLoading,
+  });
 }
 
 class AuthStateLoggedOut extends AuthState with EquatableMixin {
@@ -44,9 +41,9 @@ class AuthStateLoggedOut extends AuthState with EquatableMixin {
 
   const AuthStateLoggedOut({
     required this.exception,
-    required bool isLoading,
-    String? loadingText,
-  }) : super(isLoading: isLoading, loadingText: loadingText);
+    required super.isLoading,
+    super.loadingText,
+  });
 
   @override
   List<Object?> get props => [exception, isLoading];
@@ -59,6 +56,6 @@ class AuthStateForgotPassword extends AuthState {
   const AuthStateForgotPassword({
     required this.exception,
     required this.hasSentEmail,
-    required bool isLoading,
-  }) : super(isLoading: isLoading);
+    required super.isLoading,
+  });
 }

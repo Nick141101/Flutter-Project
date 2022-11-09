@@ -8,7 +8,7 @@ import 'package:flutterproject/utilities/generics/get_arguments.dart';
 import 'package:share_plus/share_plus.dart';
 
 class CreateUpdateNoteView extends StatefulWidget {
-  const CreateUpdateNoteView({Key? key}) : super(key: key);
+  const CreateUpdateNoteView({super.key});
 
   @override
   State<CreateUpdateNoteView> createState() => _CreateUpdateNoteViewState();

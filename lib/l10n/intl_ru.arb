@@ -48,6 +48,16 @@
   "register_view_already_registered": "Уже зарегистрированы? Войдите здесь!",
 
   "verify_email_view_prompt": "Мы отправили вам подтверждение по электронной почте. Откройте его, чтобы подтвердить свою учетную запись. Если вы еще не получили письмо с подтверждением, нажмите кнопку ниже!",
-  "verify_email_send_email_verification": "Отправить подтверждение по электронной почте"
+  "verify_email_send_email_verification": "Отправить подтверждение по электронной почте",
+
+  "notes_title": "{count, plural, =0{Еще нет заметок} =1{Заметка: 1} other{Заметки: {count}}}",
+  "@notes_title": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "3 заметки"
+      }
+    }
+  }
 
 }

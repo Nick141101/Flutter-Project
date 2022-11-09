@@ -93,7 +93,10 @@ class _LoginViewState extends State<LoginView> {
                         .read<AuthBloc>()
                         .add(AuthEventLogIn(email, password));
                   },
-                  child: Text(context.loc.login),
+                  child: Text(
+                    context.loc.login,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 TextButton(
                   onPressed: () {
@@ -101,7 +104,10 @@ class _LoginViewState extends State<LoginView> {
                         .read<AuthBloc>()
                         .add(const AuthEventForgotPassword());
                   },
-                  child: Text(context.loc.login_view_forgot_password),
+                  child: Text(
+                    context.loc.login_view_forgot_password,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 TextButton(
                   onPressed: () {
@@ -109,7 +115,10 @@ class _LoginViewState extends State<LoginView> {
                         .read<AuthBloc>()
                         .add(const AuthEventShouldRegister());
                   },
-                  child: Text(context.loc.login_view_not_registered_yet),
+                  child: Text(
+                    context.loc.login_view_not_registered_yet,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ],
             ),
